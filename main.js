@@ -1313,7 +1313,7 @@ function createTallyBoxWindow1() // Tally Box Window 1
 {
 	if (tallyBoxWindow1 === null)
 	{
-		tallyBoxWindow1 = new BrowserWindow({x: tallyBoxWindow1State.x, y: tallyBoxWindow1State.y, width: tallyBoxWindow1State.width, height: tallyBoxWindow1State.height, show: true, frame: false, transparent: false});
+		tallyBoxWindow1 = new BrowserWindow({x: tallyBoxWindow1State.x, y: tallyBoxWindow1State.y, width: tallyBoxWindow1State.width, height: tallyBoxWindow1State.height, show: true, frame: false, transparent: true});
 		tallyBoxWindow1.setAlwaysOnTop(true, "floating", 1);
 		tallyBoxWindow1.setHasShadow(false);
 		tallyBoxWindow1.setIgnoreMouseEvents(true);
