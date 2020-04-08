@@ -41,11 +41,12 @@
         "start": "electron .",
         "package-mac": "electron-packager . --overwrite --platform=darwin --arch=x64 --icon=fixtures/icons/mac/icon.icns --prune=true --out=release-builds",
         "package-win": "electron-packager . protally --overwrite --asar=false --platform=win32 --arch=x64 --icon=fixtures/icons/win/icon.ico --prune=true --out=release-builds --version-string.CompanyName=JA --version-string.FileDescription=JA --version-string.ProductName=\"ProTally\"",
-        "package-linux": "electron-packager . protally --overwrite --asar=true --platform=linux --arch=x64 --icon=fixtures/icons/png/1024x1024.png --prune=true --out=release-builds"
+        "package-linux": "electron-packager . protally --overwrite --asar=true --platform=linux --arch=x64 --icon=fixtures/icons/png/1024x1024.png --prune=true --out=release-builds",
+        "postinstall": "electron-rebuild"
     },
     "devDependencies": {
         "electron": "^4.1.0",
         "electron-packager": "^13.1.1",
-        "electron-rebuild": "^1.8.4"
+        "electron-rebuild": "^1.10.1"
     }
 }
