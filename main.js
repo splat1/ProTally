@@ -1313,7 +1313,7 @@ function createTallyBoxWindow1() // Tally Box Window 1
 {
 	if (tallyBoxWindow1 === null)
 	{
-		tallyBoxWindow1 = new BrowserWindow({x: tallyBoxWindow1State.x, y: tallyBoxWindow1State.y, width: tallyBoxWindow1State.width, height: tallyBoxWindow1State.height, show: true, frame: false, transparent: false});
+		tallyBoxWindow1 = new BrowserWindow({x: tallyBoxWindow1State.x, y: tallyBoxWindow1State.y, width: tallyBoxWindow1State.width, height: tallyBoxWindow1State.height, show: false, frame: false, transparent: true});
 		tallyBoxWindow1.setAlwaysOnTop(true, "floating", 1);
 		tallyBoxWindow1.setHasShadow(false);
 		tallyBoxWindow1.setIgnoreMouseEvents(true);
@@ -1327,6 +1327,7 @@ function createTallyBoxWindow1() // Tally Box Window 1
 			tallyBoxWindow1.webContents.send('TallyBox-Label', store.get("TallyBox1-Label"));
 			tallyBoxWindow1.webContents.send('TallyBox-ShowLabel', store.get("TallyBox1-ShowLabel"));
 			tallyBoxWindow1.webContents.send('TallyBox-TransparencyValue', store.get("TallyBox1-TransparencyValue"));
+			tallyBoxWindow1.showInactive();
 		});
 
 		tallyBoxWindow1.on('closed', () => {
@@ -1342,7 +1343,7 @@ function createTallyBoxWindow2() // Tally Box Window 2
 {
 	if (tallyBoxWindow2 === null)
 	{
-		tallyBoxWindow2 = new BrowserWindow({x: tallyBoxWindow2State.x, y: tallyBoxWindow2State.y, width: tallyBoxWindow2State.width, height: tallyBoxWindow2State.height, show: true, frame: false, transparent: true});
+		tallyBoxWindow2 = new BrowserWindow({x: tallyBoxWindow2State.x, y: tallyBoxWindow2State.y, width: tallyBoxWindow2State.width, height: tallyBoxWindow2State.height, show: false, frame: false, transparent: true});
 		tallyBoxWindow2.setAlwaysOnTop(true, "floating", 1);
 		tallyBoxWindow2.setHasShadow(false);
 		tallyBoxWindow2.setIgnoreMouseEvents(true);
@@ -1356,6 +1357,7 @@ function createTallyBoxWindow2() // Tally Box Window 2
 			tallyBoxWindow2.webContents.send('TallyBox-Label', store.get("TallyBox2-Label"));
 			tallyBoxWindow2.webContents.send('TallyBox-ShowLabel', store.get("TallyBox2-ShowLabel"));
 			tallyBoxWindow2.webContents.send('TallyBox-TransparencyValue', store.get("TallyBox2-TransparencyValue"));
+			tallyBoxWindow2.showInactive();
 		});
 
 		tallyBoxWindow2.on('closed', () => {
@@ -1371,7 +1373,7 @@ function createTallyBoxWindow3() // Tally Box Window 3
 {
 	if (tallyBoxWindow3 === null)
 	{
-		tallyBoxWindow3 = new BrowserWindow({x: tallyBoxWindow3State.x, y: tallyBoxWindow3State.y, width: tallyBoxWindow3State.width, height: tallyBoxWindow3State.height, show: true, frame: false, transparent: true});
+		tallyBoxWindow3 = new BrowserWindow({x: tallyBoxWindow3State.x, y: tallyBoxWindow3State.y, width: tallyBoxWindow3State.width, height: tallyBoxWindow3State.height, show: false, frame: false, transparent: true});
 		tallyBoxWindow3.setAlwaysOnTop(true, "floating", 1);
 		tallyBoxWindow3.setHasShadow(false);
 		tallyBoxWindow3.setIgnoreMouseEvents(true);
@@ -1385,6 +1387,7 @@ function createTallyBoxWindow3() // Tally Box Window 3
 			tallyBoxWindow3.webContents.send('TallyBox-Label', store.get("TallyBox3-Label"));
 			tallyBoxWindow3.webContents.send('TallyBox-ShowLabel', store.get("TallyBox3-ShowLabel"));
 			tallyBoxWindow3.webContents.send('TallyBox-TransparencyValue', store.get("TallyBox3-TransparencyValue"));
+			tallyBoxWindow3.showInactive();
 		});
 
 		tallyBoxWindow3.on('closed', () => {
@@ -1414,6 +1417,7 @@ function createTallyBoxWindow4() // Tally Box Window 4
 			tallyBoxWindow4.webContents.send('TallyBox-Label', store.get("TallyBox4-Label"));
 			tallyBoxWindow4.webContents.send('TallyBox-ShowLabel', store.get("TallyBox4-ShowLabel"));
 			tallyBoxWindow4.webContents.send('TallyBox-TransparencyValue', store.get("TallyBox4-TransparencyValue"));
+			tallyBoxWindow4.showInactive();
 		});
 
 		tallyBoxWindow4.on('closed', () => {
